@@ -4,7 +4,9 @@
 
 html {
   background-color: white;
+  color: black;
 }
 html.dark {
-  background-color: #000;
+  background-color: black;
+  color: white;
 }

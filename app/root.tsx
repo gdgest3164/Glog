@@ -9,7 +9,6 @@ export const links: LinksFunction = () => [{ rel: "stylesheet", href: stylesheet
 
 export const loader: LoaderFunction = async ({ request }) => {
   const cookies = request.headers.get("Cookie");
-  console.log(cookies);
   const darkMode = cookies?.includes("darkMode=1") ? true : false;
 
   return json({ darkMode });
