@@ -22,32 +22,20 @@ export default function Image({ src }: IProps) {
   useEffect(() => {
     if (!observer) {
       observer = new IntersectionObserver(onIntersection, {
-        // 확인을 위해 이미지 절반이 나타날 때 로딩한다.
-        threshold: 0.1
+        threshold: 0,
       });
     }
     imgRef.current && observer.observe(imgRef.current);
   }, []);
 
-  return (
-    <img
-      ref={imgRef}
-      loading="lazy"
-      src={isLoad ? src : 'https://via.placeholder.com/576x350'}
-      className="mo tn adq aij aqe bxy cvd"
-      alt=""
-    />
-  );
+  return <img ref={imgRef} loading="lazy" src={isLoad ? src : "/Images/loading_img.png"} className="mo tn adq aij aqe bxy cvd" alt="" />;
 }
 
 let observer: IntersectionObserver | null = null;
 const LOAD_IMG_EVENT_TYPE = "loadImage";
 
-function onIntersection(
-  entries: IntersectionObserverEntry[],
-  io: IntersectionObserver
-) {
-  entries.forEach(entry => {
+function onIntersection(entries: IntersectionObserverEntry[], io: IntersectionObserver) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       io.unobserve(entry.target);
       entry.target.dispatchEvent(new CustomEvent(LOAD_IMG_EVENT_TYPE));
