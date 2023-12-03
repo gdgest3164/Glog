@@ -8,7 +8,6 @@ export default function Item(post: any) {
         <Link to={`/${post.post.id}`}>
           <div className="ab tn rounded-lg overflow-hidden relative transition duration-300 transform group-hover:-translate-y-6">
             <Image src={post.post.imageUrl} />
-            {/* <div className="absolute inset-0 z-10 w-full h-full bg-gradient-to-t from-gray-950"></div> */}
           </div>
           <p className="mt-3 line-clamp-3 leading-6 transition duration-700 transform group-hover:-translate-y-4">{post.post.title}</p>
 
@@ -20,7 +19,7 @@ export default function Item(post: any) {
               </h3> */}
               <Link
                 to={`/${post.post.category.id}`}
-                className="text-sm relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 hover:bg-gray-100 transition duration-1000 transform group-hover:-translate-y-2"
+                className="text-sm relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 transition duration-1000 transform group-hover:-translate-y-2"
               >
                 {post.post.category.title}
               </Link>
