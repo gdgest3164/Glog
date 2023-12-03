@@ -22,7 +22,7 @@ const ThemeSwitcher = () => {
 
   return (
     <>
-      <div className="m-3 flex justify-between px-3">
+      <div className="m-3 flex justify-between px-3 items-center">
         <Link to={"/"}>
           <div className="text-4xl ">
             <svg version="1.1" width="20%" height="20%" viewBox="7.694999694824219 13.744559288024902 84.60900115966797 72.50543975830078">
@@ -50,7 +50,9 @@ const ThemeSwitcher = () => {
         </Link>
         <button
           onClick={toggleDarkMode}
-          className={`p-4 rounded-full ${darkMode ? "bg-yellow-400" : "bg-gray-800"} ${darkMode ? "text-gray-900" : "text-white"} transition-colors duration-200 float-right`}
+          className={`p-2 w-8 h-8 flex justify-center items-center rounded-full ${darkMode ? "bg-yellow-400" : "bg-gray-800"} ${
+            darkMode ? "text-gray-900" : "text-white"
+          } transition-colors duration-200 float-right`}
         >
           {darkMode ? (
             <svg data-toggle-icon="sun" className="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
