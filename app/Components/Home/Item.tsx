@@ -7,21 +7,23 @@ export default function Item(post: any) {
         <div className="ab tn">
           <Image src={post.post.imageUrl} />
         </div>
-        <div className="flex items-center gap-x-4 text-xs mt-3">
-          <time dateTime={post.post.datetime}>{post.post.date}</time>
-          <a href={post && post.post.category.href ? post.post.category.href : "#"} className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">
-            {post.post.category.title}
-          </a>
-        </div>
-        <div className="group relative">
-          <h3 className="mt-3 text-lg font-semibold leading-6  group-hover:">
-            <a href={post.post.href}>
-              <span className="absolute inset-0" />
-              {post.post.title}
+        <div className="flex justify-between w-full">
+          <div className="mt-3 group relative flex gap-2 items-center">
+            <h3 className="text-lg font-semibold leading-6  group-hover:">
+              <a href="#">
+                <span className="absolute inset-0" />
+                {post.post.title}
+              </a>
+            </h3>
+            <a href="#" className="text-sm relative z-10 rounded-full bg-gray-50 px-3 py-1 font-medium text-gray-600 hover:bg-gray-100">
+              {post.post.category.title}
             </a>
-          </h3>
-          <p className="mt-5 line-clamp-3 text-sm leading-6 ">{post.post.description}</p>
+          </div>
+          <div className="flex items-center gap-x-4 text-xs mt-3">
+            <time>{new Date(post.post.created_at).toLocaleDateString("ko-KR", { year: "numeric", month: "2-digit", day: "2-digit" })}</time>
+          </div>
         </div>
+        <p className="mt-3 line-clamp-3 text-sm leading-6 ">{post.post.description}</p>
       </article>
     )
   );
