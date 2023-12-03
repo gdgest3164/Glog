@@ -33,10 +33,17 @@ const ThemeSwitcher = () => {
                 <path d="M60.73 60.578c-.102-.09-.219-.172-.328-.25a9.704 9.704 0 0 0-7.281-1.602 9.7 9.7 0 0 0-6.29 4.012 9.704 9.704 0 0 0-1.601 7.29 9.644 9.644 0 0 0 4.012 6.288 9.753 9.753 0 0 0 5.59 1.77c1.898 0 3.8-.559 5.46-1.692.98-.66 1.828-1.5 2.532-2.5a9.71 9.71 0 0 0-2.094-13.316zm-1.07.457a7.486 7.486 0 0 0-5.11 3.129c-2.39 3.41-1.539 8.11 1.86 10.488a7.512 7.512 0 0 0 3.601 1.32c-3.078 2.09-7.25 2.192-10.48-.07-4.191-2.922-5.21-8.692-2.289-12.88 2.93-4.179 8.692-5.21 12.871-2.288.11.07.211.148.309.23a7.075 7.075 0 0 0-.762.07z"></path>
               </g>
               <defs>
-                <linearGradient gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1000" x1="10.720890045166028" y1="89.27588939666748" x2="89.27811050415039" y2="10.718668937683104">
-                  <stop stop-color="#8841ec" offset="0.05"></stop>
-                  <stop stop-color="#108f9d" offset="0.95"></stop>
-                </linearGradient>
+                {darkMode ? (
+                  <linearGradient gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1000" x1="10.720890045166028" y1="89.27588939666748" x2="89.27811050415039" y2="10.718668937683104">
+                    <stop stop-color="#8841ec" offset="0.05"></stop>
+                    <stop stop-color="#108f9d" offset="0.95"></stop>
+                  </linearGradient>
+                ) : (
+                  <linearGradient gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1000" x1="10.720890045166028" y1="89.27588939666748" x2="89.27811050415039" y2="10.718668937683104">
+                    <stop stop-color="#ec9441" offset="0.05"></stop>
+                    <stop stop-color="#9d7510" offset="0.95"></stop>
+                  </linearGradient>
+                )}
               </defs>
             </svg>
           </div>
