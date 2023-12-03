@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 const ThemeSwitcher = () => {
@@ -22,7 +23,9 @@ const ThemeSwitcher = () => {
   return (
     <>
       <div className="m-3 flex justify-between px-3">
-        <div className="text-4xl">💩 log</div>
+        <Link to={"/"}>
+          <div className="text-4xl">💩 log</div>
+        </Link>
         <button
           onClick={toggleDarkMode}
           className={`px-4 py-2 rounded-full ${darkMode ? "bg-yellow-400" : "bg-gray-800"} ${darkMode ? "text-gray-900" : "text-white"} transition-colors duration-200 float-right`}
