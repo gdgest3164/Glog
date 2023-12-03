@@ -27,7 +27,7 @@ const ThemeSwitcher = () => {
     },
     end: {
       fill: darkMode ? "rgba(255,255,255,1)" : "rgba(0,0,0,1)",
-      pathLength: 1.5,
+      pathLength: 1.8,
       transition: {
         default: { duration: 5 },
         fill: { duration: 1, delay: 1 },
