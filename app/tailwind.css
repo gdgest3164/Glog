@@ -8,6 +8,6 @@ html {
   color: black;
 }
 html.dark {
-  background-color: black;
+  background-color: rgb(17, 13, 21);
   color: white;
 }

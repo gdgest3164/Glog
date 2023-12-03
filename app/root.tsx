@@ -33,6 +33,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <img src="/Images/background.avif" className="absolute mt-0 blur-sm -z-10" alt="test" />
         <ThemeSwitcher />
         <Outlet />
         <ScrollRestoration />
