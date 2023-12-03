@@ -5,7 +5,7 @@ export default function Item(post: any) {
   return (
     post && (
       <article key={post.post.id} className="transition-all rounded-lg  group">
-        <Link to={`/${post.post.id}`}>
+        <Link to={`/${post.post.id}`} prefetch="intent">
           <div className="ab tn rounded-lg overflow-hidden relative transition duration-300 transform group-hover:-translate-y-6">
             <Image src={post.post.imageUrl} />
           </div>
