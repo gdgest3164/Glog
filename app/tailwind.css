@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition-property: background-color, color;
+  transition-duration: 0.02s;
+  transition-timing-function: ease-in-out;
+}
+
 html {
   background-color: white;
   color: black;
